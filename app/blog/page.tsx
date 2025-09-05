@@ -15,7 +15,7 @@ export default function BlogPage() {
       <h1 className="text-3xl mb-8 border-b border-green-600 pb-2">BLOG.DIR</h1>
 
       {posts.length === 0 ? (
-        <p className="text-sm opacity-70">// no posts found</p>
+        <p className="text-sm opacity-70">no posts found</p>
       ) : (
         <div className="space-y-6">
           {posts.map((post) => (

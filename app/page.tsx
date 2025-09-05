@@ -1,5 +1,6 @@
 import { Download, ExternalLink, Mail, Github, Linkedin } from "lucide-react"
-
+import Link from "next/link"
+import Image from "next/image"
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gray-900 text-white font-mono">
@@ -35,12 +36,13 @@ export default function Portfolio() {
             >
               [CONTACT]
             </a>
-            <a
+            <Link
               href="/blog"
               className="border-2 border-white px-3 py-2 md:px-4 md:py-2 hover:bg-white hover:text-black transition-none text-center text-sm md:text-base"
-            >
+              >
               [BLOG]
-            </a>
+              </Link>
+
           </nav>
         </div>
       </header>
@@ -48,7 +50,7 @@ export default function Portfolio() {
       <section className="border-b-4 border-green-400 p-6 hidden">
                   <div>
                       <div className="w-52 h-52 border object-cover border-solid">
-                          <img src="./logo.png  " alt="Pratham Patel"/> </div>
+                          <Image src="/logo.png" width={250} height={250} alt="Pratham Patel"/> </div>
                   </div>
               </section>
       {/* About Section */}
@@ -62,12 +64,12 @@ export default function Portfolio() {
                 I’m a student who enjoys building clean, functional digital tools and interfaces that work well and look good.
               </p>
               <p className="mb-4 leading-relaxed">
-                I'm a computer science student who enjoys turning caffeine into working code. I focus on building clean, functional systems with an eye for simplicity and performance. My main interests lie in AI, data, and figuring out how things break so I can fix them better.
+                I am a computer science student who enjoys turning caffeine into working code. I focus on building clean, functional systems with an eye for simplicity and performance. My main interests lie in AI, data, and figuring out how things break so I can fix them better.
               </p>
               <h3 className="text-xl font-bold mb-4 text-green-400 mt-6">PHILOSOPHY:</h3>
               <p className="leading-relaxed">
-                "The best code is code that doesn't need to exist. The second best is code that's so simple it obviously
-                has no bugs."
+                &quot;The best code is code that does not need to exist. The second best is code that&apos;s so simple it obviously
+                has no bugs.&quot;
               </p>
             </div>
             <div className="border-2 border-white p-6">
@@ -367,7 +369,7 @@ export default function Portfolio() {
             </div>
 
             <div className="mt-8 text-center">
-              <p className="text-green-400 font-bold">$ echo "Let's build something that works."</p>
+              <p className="text-green-400 font-bold">$ echo &quot;Let&apos;s build something that works.&quot;</p>
             </div>
           </div>
         </div>
