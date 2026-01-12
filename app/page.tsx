@@ -12,7 +12,7 @@ export default function Portfolio() {
               PRATHAM PATEL
             </h1>
             <p className="text-base md:text-xl text-green-400">
-              SOFTWARE ENGINEER / BACKEND SPECIALIST
+              SYSTEMS PROGRAMMER
             </p>
           </div>
           <nav className="flex flex-col sm:flex-row gap-3 md:gap-6">
@@ -81,8 +81,8 @@ export default function Portfolio() {
                 I am a computer science student who enjoys turning caffeine into
                 working code. I focus on building clean, functional systems with
                 an eye for simplicity and performance. My main interests lie in
-                AI, data, and figuring out how things break so I can fix them
-                better.
+                AI, systems, data, and figuring out how things break so I can
+                fix them better.
               </p>
               <h3 className="text-xl font-bold mb-4 text-green-400 mt-6">
                 PHILOSOPHY:
@@ -100,20 +100,19 @@ export default function Portfolio() {
               <pre className="text-sm leading-relaxed">
                 {`{
   "languages": [
-    "Python", "Go", "JavaScript", "SQL"
+    "Python", "C", "C++", "Bash"
   ],
-  "frameworks": [
-    "FastAPI", "Django", "Node.js"
-  ],
-  "databases": [
-    "PostgreSQL", "MongoDB"
-  ],
-  "infrastructure": [
-    "Docker"
+  "current_focus": [
+      "Compiler Design", "System Architecture",
+      "Machine Learning"
   ],
   "tools": [
-    "Git", "Linux", "Vim", "tmux"
+    "Fedora Linux", "Git", "Zed", "Vim (Learning)"
+  ],
+  "projects": [
+    "Stanza (Language)", "Security Log Analyzer"
   ]
+
 }`}
               </pre>
             </div>
@@ -122,7 +121,7 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="border-b-4 border-green-400 p-6 hidden">
+      <section id="projects" className="border-b-4 border-green-400 p-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 border-b-2 border-white pb-2">
             PROJECTS.DIR
@@ -131,44 +130,59 @@ export default function Portfolio() {
             {/* Project 1 */}
             <div className="border-2 border-white">
               <div className="border-b-2 border-white p-4 bg-green-400 text-black">
-                <h3 className="text-xl font-bold">DISTRIBUTED_CACHE_SYSTEM</h3>
+                <h3 className="text-xl font-bold">
+                  STANZA - PROGRAMMING LANGUAGE
+                </h3>
               </div>
               <div className="p-6">
-                <img
+                {/*<img
                   src="/placeholder.svg?height=200&width=400"
                   alt="Distributed Cache System Architecture"
                   className="w-full h-48 object-cover border-2 border-white mb-4"
-                />
+                />*/}
                 <p className="mb-4">
-                  High-performance distributed caching system handling 100K+
-                  requests/second. Built for horizontal scaling with consistent
-                  hashing.
+                  A custom interpreted programming language built from scratch
+                  in Python to understand language design fundamentals.
                 </p>
                 <div className="mb-4">
-                  <span className="text-green-400 font-bold">STACK:</span>
-                  <code className="ml-2">Go, Redis, Docker, Kubernetes</code>
+                  <span className="text-green-400 font-bold">
+                    Current Build:
+                  </span>
+                  <ul className="mt-2 space-y-1">
+                    <li>
+                      - Implemented a custom Lexer and Recursive Descent Parser.
+                    </li>
+                    <li>
+                      - State Management: Just shipped variable declaration and
+                      assignment support.
+                    </li>
+                    <li>
+                      - Roadmap: Working on control flow (if/else) and loops
+                      next.
+                    </li>
+                  </ul>
                 </div>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://github.com/sadisticbrew/stanza-lang"
                     className="border-2 border-white px-3 py-1 hover:bg-white hover:text-black flex items-center gap-2"
                   >
                     <Github size={16} />
                     CODE
                   </a>
-                  <a
+                  {/*<a
                     href="#"
                     className="border-2 border-white px-3 py-1 hover:bg-white hover:text-black flex items-center gap-2"
                   >
                     <ExternalLink size={16} />
                     DEMO
-                  </a>
+                  </a>*/}
                 </div>
               </div>
             </div>
 
             {/* Project 2 */}
-            <div className="border-2 border-white">
+            <div className="border-2 border-white hidden">
               <div className="border-b-2 border-white p-4 bg-green-400 text-black">
                 <h3 className="text-xl font-bold">API_GATEWAY_SERVICE</h3>
               </div>
@@ -209,7 +223,7 @@ export default function Portfolio() {
             </div>
 
             {/* Project 3 */}
-            <div className="border-2 border-white">
+            <div className="border-2 border-white hidden">
               <div className="border-b-2 border-white p-4 bg-green-400 text-black">
                 <h3 className="text-xl font-bold">REAL_TIME_ANALYTICS</h3>
               </div>
@@ -242,7 +256,7 @@ export default function Portfolio() {
             </div>
 
             {/* Project 4 */}
-            <div className="border-2 border-white">
+            <div className="border-2 border-white hidden">
               <div className="border-b-2 border-white p-4 bg-green-400 text-black">
                 <h3 className="text-xl font-bold">CLI_DEPLOYMENT_TOOL</h3>
               </div>
@@ -431,7 +445,7 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className="border-t-4 border-green-400 p-6 text-center">
-        <p className="text-green-400">© 2025 PRATHAM </p>
+        <p className="text-green-400">© 2026 PRATHAM </p>
       </footer>
     </div>
   );
