@@ -100,17 +100,17 @@ export default function Portfolio() {
               <pre className="text-sm leading-relaxed">
                 {`{
   "languages": [
-    "Python", "C", "C++", "Bash"
+    "Python", "C", "C++", "Bash, Go"
   ],
   "current_focus": [
       "Compiler Design", "System Architecture",
-      "Machine Learning"
+      "CLI Design"
   ],
   "tools": [
     "Fedora Linux", "Git", "Zed", "Vim (Learning)"
   ],
   "projects": [
-    "Stanza (Language)", "Security Log Analyzer"
+    "Stanza (Language)", "Security Log Analyzer", "Horcrux"
   ]
 
 }`}
@@ -150,15 +150,17 @@ export default function Portfolio() {
                   </span>
                   <ul className="mt-2 space-y-1">
                     <li>
-                      - Implemented a custom Lexer and Recursive Descent Parser.
+                      - Control Flow & Loops: Shipped if/elif/else, while, and
+                      for loops.
                     </li>
                     <li>
-                      - State Management: Just shipped variable declaration and
-                      assignment support.
+                      - Functions: Added first-class support for named and
+                      anonymous functions.
                     </li>
                     <li>
-                      - Roadmap: Working on control flow (if/else) and loops
-                      next.
+                      - Types & Logic: Added standard comparators and custom
+                      booleans (evaluating to &apos;fact&apos; and
+                      &apos;cap&apos;).
                     </li>
                   </ul>
                 </div>
@@ -182,41 +184,54 @@ export default function Portfolio() {
             </div>
 
             {/* Project 2 */}
-            <div className="border-2 border-white hidden">
+            <div className="border-2 border-white">
               <div className="border-b-2 border-white p-4 bg-green-400 text-black">
-                <h3 className="text-xl font-bold">API_GATEWAY_SERVICE</h3>
+                <h3 className="text-xl font-bold">
+                  HORCRUX - CRYPTOGRAPHIC FILE VAULT
+                </h3>
               </div>
               <div className="p-6">
-                <img
+                {/*<img
                   src="/placeholder.svg?height=200&width=400"
                   alt="API Gateway Dashboard"
                   className="w-full h-48 object-cover border-2 border-white mb-4"
-                />
+                />*/}
                 <p className="mb-4">
-                  Custom API gateway with rate limiting, authentication, and
-                  request routing. Reduced latency by 40% compared to existing
-                  solutions.
+                  A CLI tool that secures sensitive files using AES-256-GCM
+                  envelope encryption. It mathematically shatters the master
+                  encryption key into distinct pieces using Shamir&apos;s Secret
+                  Sharing (SSS) to ensure zero-knowledge offline storage.
                 </p>
                 <div className="mb-4">
                   <span className="text-green-400 font-bold">STACK:</span>
-                  <code className="ml-2">
-                    Python, FastAPI, PostgreSQL, Redis
-                  </code>
+                  <code className="ml-2">Go</code>
+                </div>
+                <div className="mb-4">
+                  <span className="text-green-400 font-bold">
+                    Current Build:
+                  </span>
+                  <ul className="mt-2 space-y-1">
+                    <li>
+                      - Integrated Google Tink for memory-safe data streaming of
+                      massive files.
+                    </li>
+                    <li>
+                      - Built a custom Shamir&apos;s Secret Sharing math engine
+                      from scratch to handle key shattering.
+                    </li>
+                    <li>
+                      - Designed a custom binary metadata header (HRX2) for
+                      secure key reconstruction and seamless file restoration.
+                    </li>
+                  </ul>
                 </div>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://github.com/sadisticbrew/Horcrux"
                     className="border-2 border-white px-3 py-1 hover:bg-white hover:text-black flex items-center gap-2"
                   >
                     <Github size={16} />
                     CODE
-                  </a>
-                  <a
-                    href="#"
-                    className="border-2 border-white px-3 py-1 hover:bg-white hover:text-black flex items-center gap-2"
-                  >
-                    <ExternalLink size={16} />
-                    DOCS
                   </a>
                 </div>
               </div>
@@ -228,11 +243,11 @@ export default function Portfolio() {
                 <h3 className="text-xl font-bold">REAL_TIME_ANALYTICS</h3>
               </div>
               <div className="p-6">
-                <img
+                {/*<img
                   src="/placeholder.svg?height=200&width=400"
                   alt="Analytics Dashboard"
                   className="w-full h-48 object-cover border-2 border-white mb-4"
-                />
+                />*/}
                 <p className="mb-4">
                   Real-time data processing pipeline for analytics. Processes
                   millions of events per day with sub-second latency.
