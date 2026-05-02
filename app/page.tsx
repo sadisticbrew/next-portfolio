@@ -238,29 +238,60 @@ export default function Portfolio() {
             </div>
 
             {/* Project 3 */}
-            <div className="border-2 border-white hidden">
+            <div className="border-2 border-white">
               <div className="border-b-2 border-white p-4 bg-green-400 text-black">
-                <h3 className="text-xl font-bold">REAL_TIME_ANALYTICS</h3>
+                <h3 className="text-xl font-bold">
+                  MUON — eBPF-BASED PROCESS TRACER
+                </h3>
               </div>
               <div className="p-6">
                 {/*<img
                   src="/placeholder.svg?height=200&width=400"
-                  alt="Analytics Dashboard"
+                  alt="API Gateway Dashboard"
                   className="w-full h-48 object-cover border-2 border-white mb-4"
                 />*/}
                 <p className="mb-4">
-                  Real-time data processing pipeline for analytics. Processes
-                  millions of events per day with sub-second latency.
+                  Muon is a high-performance, localized observability tool
+                  designed to bring enterprise-grade kernel tracing to the
+                  everyday developer&apos;s terminal.
                 </p>
                 <div className="mb-4">
                   <span className="text-green-400 font-bold">STACK:</span>
-                  <code className="ml-2">
-                    Rust, Apache Kafka, ClickHouse, Docker
-                  </code>
+                  <code className="ml-2">C, Go, eBPF</code>
+                </div>
+                <div className="mb-4">
+                  <span className="text-green-400 font-bold">
+                    Current Build:
+                  </span>
+                  <ul className="mt-2 space-y-1">
+                    <li>
+                      - Built a Linux kernel-space process tracer in Go using
+                      eBPF, monitoring syscall events across an entire process
+                      tree with kernel-space PID filtering via eBPF hashmaps
+                    </li>
+                    <li>
+                      - Achieved 74x lower overhead than perf trace on
+                      openat-heavy workloads (+1.1% vs +81%) and 42x lower on
+                      exec-heavy workloads (+3.3% vs +139%), validated across 10
+                      trimmed benchmark runs with CPU pinning and frequency
+                      locking.
+                    </li>
+                    <li>
+                      - Implemented enter/exit syscall pair tracking for mmap
+                      and brk with per-thread collision-safe hashmaps, enabling
+                      accurate memory growth tracing with 5% overhead vs perf
+                      trace&apos;s 20%.
+                    </li>
+                    <li>
+                      - Designed zero-dependency single-binary distribution - no
+                      agents, no kernel modules, no configuration; attaches to
+                      any running process via PID in under one second.
+                    </li>
+                  </ul>
                 </div>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://github.com/sadisticbrew/muon"
                     className="border-2 border-white px-3 py-1 hover:bg-white hover:text-black flex items-center gap-2"
                   >
                     <Github size={16} />
