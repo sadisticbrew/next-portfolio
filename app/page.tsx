@@ -270,20 +270,17 @@ export default function Portfolio() {
                       tree with kernel-space PID filtering via eBPF hashmaps
                     </li>
                     <li>
-                      - Achieved 74x lower overhead than perf trace on
-                      openat-heavy workloads (+1.1% vs +81%) and 42x lower on
-                      exec-heavy workloads (+3.3% vs +139%), validated across 10
-                      trimmed benchmark runs with CPU pinning and frequency
-                      locking.
+                      - Near-zero overhead on file and memory syscall workloads
+                      (&lt;1% vs baseline), with exec-heavy workloads at 12.7%
+                      overhead — compared to perf trace&apos;s 67.5% and
+                      strace&apos;s 144%
                     </li>
                     <li>
-                      - Implemented enter/exit syscall pair tracking for mmap
-                      and brk with per-thread collision-safe hashmaps, enabling
-                      accurate memory growth tracing with 5% overhead vs perf
-                      trace&apos;s 20%.
+                      - Validated across 7 trimmed runs with CPU frequency
+                      locked and cores isolated — zero events dropped
                     </li>
                     <li>
-                      - Designed zero-dependency single-binary distribution - no
+                      - Designed zero-dependency single-binary distribution. No
                       agents, no kernel modules, no configuration; attaches to
                       any running process via PID in under one second.
                     </li>
